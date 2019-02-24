@@ -1,9 +1,70 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>Bienvenue</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Trierweiler</title>
+    
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js" integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o" crossorigin="anonymous"></script>
+    
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script>
+      function check_login(login, password)
+      {
+        console.log("Login=" + login + 	"-Password=" + password);
+        console.log(document.getElementById('inputEmail').value );
+        if (login.localeCompare("drfalken@altair.fr")==0)
+        {
+          console.log("User found");
+          if (password.localeCompare("wargames")==0)
+            window.location.replace("./main.html");
+        }
+      }
+    </script>
+
   </head>
+
   <body>
-      Le serveur est actif.
+
+    <div class="container">
+        <div class="jumbotron">
+            <h1>Bienvenue</h1> 
+            <p>Les ressources disponibles sont indiquées ci-dessous.</p> 
+    
+            
+            <div class="container">
+              <div class="row">
+                <div class="col">
+                    <button type="button" class="btn btn-outline-dark" onclick="window.location.href='https://www.geneanet.org/profil/ftrierweiler'">Généalogie Trierweiler / Pothier </button>
+                </div>
+                <div class="col">
+                    <button type="button" class="btn btn-outline-dark">Expérimentations javascript / nodejs</button>
+                </div>
+                <div class="col">
+                    <button type="button" class="btn btn-outline-dark">Expérimentations API</button>
+                </div>
+              </div>
+            </div>
+        </div>
+
+</div>
+        
+        
+    </div>
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
   </body>
 </html>
