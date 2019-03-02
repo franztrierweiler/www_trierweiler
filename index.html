@@ -49,15 +49,16 @@
         {
             console.log("-- send_req");
             const my_http = new XMLHttpRequest();
-            const my_url = "http://35.180.183.10:3000";
+            const my_url = "http://35.180.183.10:3000/api/v0/";
             
-            my_http.open("GET", my_url);
+            my_http.open("POST", my_url);
             my_http.onreadystatechange = function () {
                 if(this.readyState === 4 && this.status === 200)
                     console.log(this.responseText);
                     change_output_text("result",this.responseText);
             };
-            my_http.send();
+            //my_http.send();
+            my_http.send(JSON.stringify({ "email": "hello@user.com", "response": { "name": "Tester" } }));
         }
     </script>
 
