@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Trierweiler</title>
+    
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js" integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o" crossorigin="anonymous"></script>
+    
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+    <script>
+        function check_login(login, password)
+        {
+            console.log("Login=" + login + 	"-Password=" + password);
+            console.log(document.getElementById('inputEmail').value );
+            if (login.localeCompare("drfalken@altair.fr")==0)
+            {
+                console.log("User found");
+                if (password.localeCompare("wargames")==0)
+                    window.location.replace("./main.html");
+            }
+        }
+        
+        function change_badge(id) 
+        {
+            document.getElementById(id).innerHTML = "TESTING";
+        }
+        
+        function change_output_text(id, value)
+        {
+            console.log(document.getElementById(id).innerHTML);
+            document.getElementById(id).value = value;
+        }
+        
+        function send_req()
+        {
+            console.log("-- send_req");
+            const my_http = new XMLHttpRequest();
+            const my_url = "http://35.180.183.10:3000/api/v0/";
+            
+            my_http.open("POST", my_url);
+            my_http.onreadystatechange = function () {
+                if(this.readyState === 4 && this.status === 200)
+                    console.log(this.responseText);
+                    change_output_text("result",this.responseText);
+            };
+            //my_http.send();
+            my_http.send(JSON.stringify({ "email": "hello@user.com", "response": { "name": "Tester" } }));
+        }
+    </script>
+
+  </head>
+
+  <body>
+
+    <div class="container">
+        <div class="jumbotron">
+            <h1>Bienvenue</h1> 
+            <p>Les ressources disponibles sont indiquées ci-dessous.</p>
+            
+            <div class="container">
+              <div class="row">
+                <div class="col">
+                    <button type="button" class="btn btn-outline-dark" onclick="window.location.href='https://www.geneanet.org/profil/ftrierweiler'">Généalogie Trierweiler / Pothier </button>
+                </div>
+                <div class="col">
+                    <button type="button"
+                    onclick="change_badge('badge_ex_js')"
+                    class="btn btn-outline-dark">Expérimentations javascript / nodejs <span id="badge_ex_js" class="badge badge-success">Nouveau</span>
+                    </button>
+                </div>
+                <div class="col">
+                    <button type="button"
+                    onclick="send_req()"
+                    class="btn btn-outline-dark">Expérimentations API
+                    </button>
+                </div>
+              </div>
+            </div>
+            
+            <form action="">
+                <div class="form-group">
+                    <label for="email">Résultat</label>
+                    <input type="email" class="form-control" id="result">
+                </div>
+            </form>
+            
+        </div>
+    </div>
+        
+        
+    </div>
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+  </body>
+</html>
