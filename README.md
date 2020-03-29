@@ -14,3 +14,7 @@ Il évolue de temps en temps au cours de mon temps libres
 
 Les autres projets associés sont
 - https://github.com/franztrierweiler/nodejs_cnx
+
+Installation des dépendances nodejs via npm sur le serveur:
+npm install -g <module_name>
+L'option -g installe dans /usr/local/lib au lieu d'installer dans le répertoire en cours où la commande npm est exécutée.
