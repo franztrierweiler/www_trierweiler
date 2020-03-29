@@ -23,3 +23,19 @@ Subtilités de nodejs:
 - Le fichier /etc/environment doit contenir la variable NODE_PATH (elle est définie quelque part mais je n'ai pas trouvé où)
     - PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
     - NODE_PATH=$NODE_PATH:/home/ubuntu/.c9/lib/node_modules
+- Dans les réjouissances de nodejs:
+    - Très confusant: sur la machine AWS on ne sait pas trop où est le "gobal" aevc npm
+
+Exemple:
+
+ubuntu@ip-172-26-4-202:~/apps/nodejs_cnx$ npm list
+/home/ubuntu/apps/nodejs_cnx
+└── (empty)
+
+ubuntu@ip-172-26-4-202:~/apps/nodejs_cnx$ npm list -g
+/home/ubuntu/.c9/lib
+├──  error: ENOENT: no such file or directory, open '/home/ubuntu/.c9/lib/node_modules/etc/package.json
+└── utf8@3.0.0
+
+npm ERR! error in /home/ubuntu/.c9/lib/node_modules/etc: ENOENT: no such file or directory, open '/home/ubuntu/.c9/lib/node_modules/etc/package.json'
+ubuntu@ip-172-26-4-202:~/apps/nodejs_cnx$ 
