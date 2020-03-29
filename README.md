@@ -7,7 +7,7 @@ Projet d'apprentissages des technos web (front et back):
 - Python
 - Technos AWS simples (Ligthsail)
 
-En 2019 et 2020, ce projet est déployé sur une machine Debian hébergée en tant que VM AWS Lightsail
+En 2019 et 2020, ce projet est déployé sur une machine Debian hébergée en tant que VM AWS Lightsail.
 Sur cette même machine fonctionne une instance Cloud9 fournie par AWS.
 
 Il évolue de temps en temps au cours de mon temps libres
