@@ -27,7 +27,7 @@ Subtilités de nodejs:
     - Très confusant: sur la machine AWS on ne sait pas trop où est le "gobal" aevc npm
 
 __Exemple:__
-Use the `printf`
+
 `ubuntu@ip-172-26-4-202:~/apps/nodejs_cnx$ npm list
 /home/ubuntu/apps/nodejs_cnx
 └── (empty)
