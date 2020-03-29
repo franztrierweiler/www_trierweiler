@@ -26,7 +26,7 @@ Subtilités de nodejs:
 - Dans les réjouissances de nodejs:
     - Très confusant: sur la machine AWS on ne sait pas trop où est le "gobal" aevc npm
 
-__Exemple:
+__Exemple:__
 
 ubuntu@ip-172-26-4-202:~/apps/nodejs_cnx$ npm list
 /home/ubuntu/apps/nodejs_cnx
