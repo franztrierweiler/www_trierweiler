@@ -9,6 +9,7 @@ Projet d'apprentissages des technos web (front et back):
 
 En 2019 et 2020, ce projet est déployé sur une machine Debian hébergée en tant que VM AWS Lightsail
 
-Il évolue de temsp en temps au cours de mon temps libres
+Il évolue de temps en temps au cours de mon temps libres
 
-Les autres projets associés sont 
+Les autres projets associés sont
+- https://github.com/franztrierweiler/nodejs_cnx
