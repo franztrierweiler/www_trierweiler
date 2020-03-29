@@ -18,3 +18,8 @@ Les autres projets associés sont
 Installation des dépendances nodejs via npm sur le serveur:
 - npm install -g <module_name>
 - L'option -g installe dans /usr/local/lib au lieu d'installer dans le répertoire en cours où la commande npm est exécutée.
+
+Subtilités de nodejs:
+- Le fichier /etc/environment doit contenir la variable NODE_PATH (elle est définie quelque part mais je n'ai pas trouvé où)
+    - PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
+    - NODE_PATH=$NODE_PATH:/home/ubuntu/.c9/lib/node_modules
